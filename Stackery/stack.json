@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "tab"
+    },
+    {
+      "id": "897c0f4d",
+      "type": "function",
+      "name": "Hello!",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "location": "inline",
+      "noerr": true,
+      "x": 410,
+      "y": 220,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "d724a9d8",
+      "type": "restApi",
+      "path": "/",
+      "x": 190,
+      "y": 220,
+      "wires": [
+        [
+          "897c0f4d"
+        ]
+      ]
+    },
+    {
+      "id": "18f51d97",
+      "type": "function",
+      "name": "Echo",
+      "outputs": 1,
+      "memorySize": 128,
+      "timeout": 30,
+      "location": "inline",
+      "noerr": true,
+      "x": 410,
+      "y": 280,
+      "wires": [
+        []
+      ]
+    },
+    {
+      "id": "368c4c6",
+      "type": "restApi",
+      "path": "/{message}",
+      "x": 210,
+      "y": 280,
+      "wires": [
+        [
+          "18f51d97"
+        ]
+      ]
+    }
+  ]
+}
