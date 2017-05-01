@@ -74,17 +74,13 @@
       "type": "dockerService",
       "containers": [
         {
-          "portMappings": [
-            80
-          ],
-          "image": "",
-          "computeUnits": 1024,
-          "memory": 512
+          "image": "quay.io/txase/imageconverter",
+          "computeUnits": 256,
+          "memory": 256
         }
       ],
-      "healthCheckPath": "/",
-      "minInstances": 2,
-      "maxInstances": 2,
+      "minInstances": 0,
+      "maxInstances": 0,
       "computeScaleIn": 0.3,
       "computeScaleOut": 0.7,
       "scalePercentage": 0.1,
