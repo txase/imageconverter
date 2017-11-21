@@ -1,93 +1,20 @@
 {
   "nodes": [
     {
-      "id": "a37a8b83",
-      "type": "objectStore",
-      "name": "Upload Bucket",
-      "publicPermissions": "write",
-      "x": 430,
-      "y": 400,
-      "wires": [
-        [
-          "cbfe948a"
-        ]
-      ]
-    },
-    {
       "id": "cbfe948a",
       "type": "function",
+      "x": 620,
+      "y": 400,
       "name": "Trigger",
       "outputs": 1,
       "memorySize": 128,
       "timeout": 30,
       "runtime": "nodejs",
       "location": "inline",
-      "envVars": {
-        "DESTINATION_BUCKET": "${node.Destination_Bucket.id}"
-      },
-      "x": 620,
-      "y": 400,
-      "wires": [
-        [
-          "22059371"
-        ]
-      ]
-    },
-    {
-      "id": "1cb6725b",
-      "type": "objectStore",
-      "name": "Destination Bucket",
-      "x": 1530,
-      "y": 400,
+      "envVars": {},
       "wires": [
         []
       ]
-    },
-    {
-      "id": "87e8e5c4",
-      "type": "virtualNetwork",
-      "x": 1040,
-      "y": 460,
-      "wires": [],
-      "width": 600,
-      "height": 400
-    },
-    {
-      "id": "fce7b7b1",
-      "type": "dockerCluster",
-      "instanceType": "t2.micro",
-      "minInstances": 1,
-      "maxInstances": 1,
-      "computeScaleIn": 0.3,
-      "computeScaleOut": 0.7,
-      "memoryScaleIn": 0.3,
-      "memoryScaleOut": 0.7,
-      "scalePercentage": 0.1,
-      "x": 960,
-      "y": 400,
-      "wires": [],
-      "width": 240,
-      "height": 160
-    },
-    {
-      "id": "22059371",
-      "type": "dockerService",
-      "containers": [
-        {
-          "image": "quay.io/txase/imageconverter",
-          "computeUnits": 256,
-          "memory": 256
-        }
-      ],
-      "minInstances": 0,
-      "maxInstances": 0,
-      "computeScaleIn": 0.3,
-      "computeScaleOut": 0.7,
-      "scalePercentage": 0.1,
-      "envVars": {},
-      "x": 940,
-      "y": 400,
-      "wires": []
     }
   ]
 }
