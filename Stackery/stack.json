@@ -3,8 +3,8 @@
     {
       "id": "cbfe948a",
       "type": "function",
-      "x": 560,
-      "y": 355,
+      "x": 520,
+      "y": 330,
       "name": "Trigger",
       "outputs": 1,
       "memorySize": 128,
